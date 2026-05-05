@@ -17,5 +17,18 @@ public class Main {
         method masing masing yang telah di override. sehingga ketika dipanggil method aktifkan, yang dipanggil punya
         method aktifkan subclass masing masing.
         */ 
+
+        // Soal 5
+        PerangkatPintar alat1 = new LampuPintar();
+        // alat1.aturKecerahan(75, "Putih"); // Ini akan error
+        /*
+        Error terjadi karena meskipun objek aktual jelas jelas LampuPintar, tapi tipe data variabelnya adalah
+        PerangkatPintar yang tidak memiliki implementasi method aturKecerahan(), sehingga tipe data PerangkatPintar
+        tidak tahu cara memakai method aturKecerahan. Solusinya adalah downcasting tipe datanya ke LampuPintar.
+        */
+
+        // Solusi Soal 5
+        LampuPintar alat2 = (LampuPintar) alat1;
+        alat2.aturKecerahan(75, "Putih");
     }
 }
