@@ -6,6 +6,8 @@ public class Main {
         perangkatPintars.add(new LampuPintar());
         perangkatPintars.add(new AcPintar());
         for (PerangkatPintar perangkatPintar : perangkatPintars) {
+            if (perangkatPintar instanceof AcPintar) // Soal 4
+                ((AcPintar) perangkatPintar).aturSuhu(20);
             perangkatPintar.aktifkan();
         }
 
